@@ -53,7 +53,7 @@ export function Diary() {
           <div className="flex-1">
             <nav className="grid items-start px-4 text-sm font-medium">
               <Link
-                href="/dashaboard/inicio"
+                href="/dashboard/inicio"
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${activeLink === "home"
                     ? "bg-[#1E6D9E]/100 text-gray-50 dark:bg-[#1E6D9E]/100 dark:text-gray-50"
                     : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -65,7 +65,7 @@ export function Diary() {
                 Inicio
               </Link>
               <Link
-                href="/dashaboard/users"
+                href="/dashboard/users"
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${activeLink === "users"
                     ? "bg-[#1E6D9E]/100 text-gray-50 dark:bg-[#1E6D9E]/100 dark:text-gray-50"
                     : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -77,7 +77,7 @@ export function Diary() {
                 Operadores
               </Link>
               <Link
-                href="/dashaboard/lands"
+                href="/dashboard/lands"
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${activeLink === "lands"
                     ? "bg-[#1E6D9E]/100 text-gray-50 dark:bg-[#1E6D9E]/100 dark:text-gray-50"
                     : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -89,7 +89,7 @@ export function Diary() {
                 Tierras
               </Link>
               <Link
-                href="/dashaboard/calendar"
+                href="/dashboard/calendar"
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${activeLink === "calendar"
                     ? "bg-[#1E6D9E]/100 text-gray-50 dark:bg-[#1E6D9E]/100 dark:text-gray-50"
                     : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
