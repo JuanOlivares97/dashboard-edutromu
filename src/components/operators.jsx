@@ -10,7 +10,7 @@ export function Operators() {
   return (
     (<div
       className="grid min-h-screen w-full overflow-hidden lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
+      <div className="border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
         <div className="flex flex-col gap-2">
           <div className="flex h-[60px] items-center px-6">
             <Link
