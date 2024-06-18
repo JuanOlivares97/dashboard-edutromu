@@ -283,9 +283,9 @@ export function Diary() {
             </DropdownMenu>
           </div>
         </header>
-        <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
-          <div className="flex w-full gap-4">
-            <Card className="w-1/3">
+        <main className="flex gap-4 p-4 md:gap-8 md:p-6">
+          <div className="md:flex w-full gap-4">
+            <Card className="w-full md:w-1/3">
               <CardHeader>
                 <CardTitle>Calendario de Trabajo</CardTitle>
               </CardHeader>
@@ -294,11 +294,11 @@ export function Diary() {
                   mode="month"
                   initialFocus
                   onSelect={handleDateSelect}
-                  className="p-0 [&_td]:w-10 [&_td]:h-10 [&_th]:w-10 [&_[name=day]]:w-10 [&_[name=day]]:h-10 [&>div]:space-x-0 [&>div]:gap-6"
+                  className="p-0 [&_td]:w-12 [&_td]:h-12 [&_th]:w-12 [&_[name=day]]:w-12 [&_[name=day]]:h-12 [&>div]:space-x-0 [&>div]:gap-6"
                 />
               </CardContent>
             </Card>
-            <div className="flex-1 w-2/3">
+            <div className="flex-1 w-full md:w-2/3">
             <Table>
               <TableHeader>
                 <TableRow>
