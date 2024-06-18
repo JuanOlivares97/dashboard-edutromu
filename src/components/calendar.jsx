@@ -101,6 +101,19 @@ export function Diary() {
                 Calendario
               </Link>
               <Link
+                href="/dashboard/mapa"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${
+                  activeLink === "maps"
+                    ? "bg-[#1E6D9E]/100 text-gray-50 dark:bg-[#1E6D9E]/100 dark:text-gray-50"
+                    : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                }`}
+                onClick={() => setActiveLink("lands")}
+                prefetch={false}
+              >
+                <GoogleMapsIcon className="h-4 w-4" />
+                Mapa
+              </Link>
+              <Link
                 href="#"
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${activeLink === "settings"
                     ? "bg-[#1E6D9E]/100 text-gray-50 dark:bg-[#1E6D9E]/100 dark:text-gray-50"
@@ -255,7 +268,7 @@ export function Diary() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
-                  <img src="/placeholder.svg" width="32" height="32" className="rounded-full" alt="Avatar" />
+                  <img src="/placeholder-user.jpg" width="32" height="32" className="rounded-full" alt="Avatar" />
                   <span className="sr-only">Toggle user menu</span>
                 </Button>
               </DropdownMenuTrigger>
@@ -390,6 +403,25 @@ function ChevronDownIcon(props) {
   )
 }
 
+function GoogleMapsIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 10c0 5-9 13-9 13s-9-8-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
 
 function HomeIcon(props) {
   return (
