@@ -66,7 +66,7 @@ export function Dashboard() {
                 Tierras
               </Link>
               <Link
-                href="#"
+                href="/dashboard/calendar"
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${
                   activeLink === "calendar"
                     ? "bg-[#1E6D9E]/100 text-gray-50 dark:bg-[#1E6D9E]/100 dark:text-gray-50"
