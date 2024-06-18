@@ -16,9 +16,9 @@ L.Icon.Default.mergeOptions({
 });
 
 export default function Home() {
-  useEffect(() => {
-    import('leaflet/dist/leaflet.css');
-  }, []);
+    useEffect(() => {
+        typeof window !== 'undefined' && import('leaflet/dist/leaflet.css');
+      }, []);
 
   return (
     <main>
