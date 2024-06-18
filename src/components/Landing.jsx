@@ -40,14 +40,6 @@ export default function Landing() {
               </li>
             </ul>
           </div>
-          <div className="text-center">
-            <Link
-              href="#"
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-              prefetch={false}>
-              Regístrate ahora
-            </Link>
-          </div>
         </div>
       </main>
     </div>)

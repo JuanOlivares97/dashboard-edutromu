@@ -10,21 +10,22 @@ import { ResponsivePie } from "@nivo/pie"
 
 export function Dashboard() {
   const [activeLink, setActiveLink] = useState("home")
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
-    (<div
-      className="grid min-h-screen w-full overflow-hidden lg:grid-cols-[280px_1fr]">
+    (<div className="grid min-h-screen w-full overflow-hidden lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
         <div className="flex flex-col gap-2">
           <div className="flex h-[60px] items-center px-6">
-            <Link
-              href="#"
-              className="flex items-center gap-2 font-semibold"
-              prefetch={false}>
+            <Link href="#" className="flex items-center gap-2 font-semibold" prefetch={false}>
               <Package2Icon className="h-6 w-6" />
               <span className="">Tractor Monitoring</span>
             </Link>
           </div>
-          <div className="flex-1">
+          {isMenuOpen && (      
           <nav className="grid items-start px-4 text-sm font-medium">
               <Link
                 href="/dashboard/inicio"
@@ -104,20 +105,19 @@ export function Dashboard() {
                 <SettingsIcon className="h-4 w-4" />
                 Configuración
               </Link>
-            </nav>
-          </div>
+          </nav>
+          )}
         </div>
       </div>
       <div className="flex flex-col">
-        <header
-          className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
-          <Link href="#" className="lg:hidden" prefetch={false}>
+        <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+        <button
+            className="lg:hidden"
+            onClick={toggleMenu}
+          >
             <Package2Icon className="h-6 w-6" />
             <span className="sr-only">Home</span>
-          </Link>
-          <div className="flex-1">
-            <h1 className="font-semibold text-lg">Inicio</h1>
-          </div>
+          </button>
           <div className="flex flex-1 items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
             <form className="ml-auto flex-1 sm:flex-initial">
               <div className="relative">
